@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package uneventos;
 
-/**
- *
- * @author Barbosas
- */
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+
 public class Login extends javax.swing.JFrame {
 
     /**
@@ -15,6 +14,9 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        this.setLocationRelativeTo(this);
+        SetImageLabel(Label, "src/imagenes/Image.png");
+        SetImageLabel(Logo, "src/imagenes/Logo.jpg");
     }
 
     /**
@@ -26,17 +28,63 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Fondo = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        Label2 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        Logo = new javax.swing.JLabel();
+        Label = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Fondo.setBackground(new java.awt.Color(255, 255, 255));
+        Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTextField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTextField1.setForeground(new java.awt.Color(66, 66, 66));
+        jTextField1.setBorder(null);
+        Fondo.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 320, 40));
+
+        jLabel1.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        jLabel1.setText("USUARIO");
+        Fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 80, 20));
+
+        Label2.setFont(new java.awt.Font("Britannic Bold", 1, 24)); // NOI18N
+        Label2.setForeground(new java.awt.Color(51, 51, 51));
+        Label2.setText("INICIAR SESIÓN");
+        Fondo.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 290, 50));
+
+        jTextField2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTextField2.setForeground(new java.awt.Color(66, 66, 66));
+        jTextField2.setBorder(null);
+        Fondo.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 310, 40));
+
+        jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        jLabel2.setText("CONTRASEÑA");
+        Fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 130, 30));
+
+        jButton1.setBackground(new java.awt.Color(0, 84, 220));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("ENTRAR");
+        jButton1.setActionCommand("ENTRAR");
+        Fondo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 120, 40));
+
+        Logo.setText("jLabel3");
+        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 80, 80));
+        Fondo.add(Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 420, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(Fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 415, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(Fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 704, Short.MAX_VALUE)
         );
 
         pack();
@@ -76,7 +124,23 @@ public class Login extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void SetImageLabel(JLabel labelName, String root) {
+       ImageIcon image = new ImageIcon(root);
+       Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelName.getWidth(), labelName.getHeight(), Image.SCALE_DEFAULT));
+       labelName.setIcon(icon);
+       this.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Fondo;
+    private javax.swing.JLabel Label;
+    private javax.swing.JLabel Label2;
+    private javax.swing.JLabel Logo;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
 }

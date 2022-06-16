@@ -176,11 +176,14 @@ public class Menu extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
       Busqueda Busqueda = new Busqueda();
-        Busqueda.setVisible(true); //pasar de esto a lista de eventos
+      Busqueda.setVisible(true);
+      this.dispose();//pasar de esto a lista de eventos
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+        Eventos Eventos = new Eventos();
+        Eventos.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -192,8 +195,9 @@ public class Menu extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        Evento Eventos = new Evento();
-        Eventos.setVisible(true); //pasar de esto a lista de eventos
+        CrearEvento CrearEvento = new CrearEvento();
+        CrearEvento.setVisible(true);
+        this.dispose();//pasar de esto a lista de eventos
     }//GEN-LAST:event_jButton7ActionPerformed
 
     /**

@@ -41,9 +41,10 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Fondo.setBackground(new java.awt.Color(255, 255, 255));
+        Fondo.setBackground(new java.awt.Color(204, 204, 204));
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jTextField1.setBackground(new java.awt.Color(214, 104, 11));
         jTextField1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextField1.setForeground(new java.awt.Color(66, 66, 66));
         jTextField1.setBorder(null);
@@ -58,10 +59,11 @@ public class Login extends javax.swing.JFrame {
         Label2.setText("INICIAR SESIÓN");
         Fondo.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 290, 50));
 
+        jTextField2.setBackground(new java.awt.Color(214, 104, 11));
         jTextField2.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(66, 66, 66));
         jTextField2.setBorder(null);
-        Fondo.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 310, 40));
+        Fondo.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 320, 40));
 
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
         jLabel2.setText("CONTRASEÑA");

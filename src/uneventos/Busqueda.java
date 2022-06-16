@@ -48,6 +48,7 @@ public class Busqueda extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         jButton8 = new javax.swing.JButton();
         Imagen = new javax.swing.JLabel();
 
@@ -141,6 +142,16 @@ public class Busqueda extends javax.swing.JFrame {
         jButton7.setText("Evento 2");
         jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 100, 160));
 
+        jButton9.setBackground(new java.awt.Color(204, 204, 204));
+        jButton9.setForeground(new java.awt.Color(255, 255, 255));
+        jButton9.setText("<");
+        jButton9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton9ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
+
         jButton8.setBackground(new java.awt.Color(0, 84, 220));
         jButton8.setText("Evento 4");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
@@ -188,6 +199,12 @@ public class Busqueda extends javax.swing.JFrame {
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton8ActionPerformed
+
+    private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
+       Menu menu = new Menu();
+       menu.setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton9ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -248,6 +265,7 @@ public class Busqueda extends javax.swing.JFrame {
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
+    private javax.swing.JButton jButton9;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

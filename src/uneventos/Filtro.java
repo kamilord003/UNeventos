@@ -36,12 +36,13 @@ public class Filtro extends javax.swing.JFrame {
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox4 = new javax.swing.JCheckBox();
+        jButton2 = new javax.swing.JButton();
         jCheckBox5 = new javax.swing.JCheckBox();
         jCheckBox6 = new javax.swing.JCheckBox();
         jCheckBox7 = new javax.swing.JCheckBox();
         jLabel1 = new javax.swing.JLabel();
-        jCheckBox8 = new javax.swing.JCheckBox();
         Imagen = new javax.swing.JLabel();
+        jCheckBox8 = new javax.swing.JCheckBox();
         jCheckBox9 = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,6 +80,16 @@ public class Filtro extends javax.swing.JFrame {
         jCheckBox4.setText("Oficial");
         jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(153, 153, 153));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setLabel("<");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 40, -1));
+
         jCheckBox5.setText("Conferencias");
         jPanel1.add(jCheckBox5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 330, -1, -1));
 
@@ -96,11 +107,11 @@ public class Filtro extends javax.swing.JFrame {
         jLabel1.setText("Temas Deseados");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 250, 50));
 
-        jCheckBox8.setText("Estudiantil");
-        jPanel1.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
-
         Imagen.setText("jLabel1");
         jPanel1.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
+
+        jCheckBox8.setText("Estudiantil");
+        jPanel1.add(jCheckBox8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
 
         jCheckBox9.setText("Investigacion");
         jCheckBox9.addActionListener(new java.awt.event.ActionListener() {
@@ -127,8 +138,8 @@ public class Filtro extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Menu menu = new Menu();
-        menu.setVisible(true);
+        Busqueda Busqueda = new Busqueda();
+         Busqueda.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -137,9 +148,7 @@ public class Filtro extends javax.swing.JFrame {
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        Busqueda Busqueda = new Busqueda();
-        Busqueda.setVisible(true);
-        this.dispose();
+        
     }//GEN-LAST:event_jCheckBox2ActionPerformed
 
     private void jCheckBox7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox7ActionPerformed
@@ -149,6 +158,12 @@ public class Filtro extends javax.swing.JFrame {
     private void jCheckBox9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox9ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBox9ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+       Busqueda Busqueda = new Busqueda();
+         Busqueda.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -194,6 +209,7 @@ public class Filtro extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup2;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox4;

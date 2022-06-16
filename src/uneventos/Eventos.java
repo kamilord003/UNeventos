@@ -4,17 +4,35 @@
  */
 package uneventos;
 
+import java.awt.Image;
+import uneventos.Conexion;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Barbosas
  */
 public class Eventos extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Eventos
-     */
+    Conexion con1= new Conexion();
+    Connection conet;
+    DefaultTableModel modelo;
+    Statement st;
+    ResultSet rs;
+    int idc;
+
     public Eventos() {
         initComponents();
+        SetImageLabel(Fondo2, "src/imagenes/fondo2.jpg");
+        setLocationRelativeTo(null);
+        ConsultarEvento();
     }
 
     /**
@@ -29,6 +47,9 @@ public class Eventos extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        TablaEventos = new javax.swing.JTable();
+        Fondo2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,13 +57,14 @@ public class Eventos extends javax.swing.JFrame {
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Britannic Bold", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("EVENTOS");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 150, 50));
 
         jButton1.setBackground(new java.awt.Color(0, 84, 220));
         jButton1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("MODIFICAR EVENTOS");
+        jButton1.setText("CREAR EVENTOS");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -50,11 +72,31 @@ public class Eventos extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 580, 200, 50));
 
+        TablaEventos.setBackground(new java.awt.Color(255, 153, 0));
+        TablaEventos.setForeground(new java.awt.Color(0, 51, 255));
+        TablaEventos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Nombre", "Tipo/Facultad", "Estado", "Aforo", "Fecha", "Lugar"
+            }
+        ));
+        TablaEventos.setGridColor(new java.awt.Color(0, 84, 220));
+        TablaEventos.setSelectionBackground(new java.awt.Color(255, 255, 255));
+        TablaEventos.setSelectionForeground(new java.awt.Color(0, 84, 220));
+        jScrollPane1.setViewportView(TablaEventos);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 420, -1));
+
+        Fondo2.setText("jLabel2");
+        jPanel1.add(Fondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -67,8 +109,8 @@ public class Eventos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Menu menu = new Menu();
-        menu.setVisible(true);
+       CrearEvento event = new CrearEvento();
+       event.setVisible(true);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -105,10 +147,48 @@ public class Eventos extends javax.swing.JFrame {
             }
         });
     }
+    
+    private void SetImageLabel(JLabel labelName, String root) {
+       ImageIcon image = new ImageIcon(root);
+       Icon icon = new ImageIcon(image.getImage().getScaledInstance(labelName.getWidth(), labelName.getHeight(), Image.SCALE_DEFAULT));
+       labelName.setIcon(icon);
+       this.repaint();
+    }
+    
+    void ConsultarEvento() {
+      String sql = "SELECT * FROM uneventos.uneventos";
+      
+      try {
+        conet = con1.conectarMySQL();
+        st = conet.createStatement();
+        rs = st.executeQuery(sql);
+        Object[] cliente = new Object[6];
+        modelo = (DefaultTableModel) TablaEventos.getModel();  
+        while (rs.next()) {
+          cliente [0] = rs.getString("Nombre");
+          cliente [1] = rs.getString("Tipo/Facultad");
+          cliente [2] = rs.getString("Estado");
+          cliente [3] = rs.getString("Aforo");   
+          cliente [4] = rs.getString("Fecha"); 
+          cliente [5] = rs.getString("Lugar"); 
+          
+          modelo.addRow(cliente);
+        }
+        TablaEventos.setModel(modelo);
+      } catch (Exception e) {
+      
+      }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo2;
+    private javax.swing.JTable TablaEventos;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+    private void mostrardatos(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }

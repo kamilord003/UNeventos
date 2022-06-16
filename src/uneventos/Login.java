@@ -80,6 +80,8 @@ public class Login extends javax.swing.JFrame {
 
         Logo.setText("jLabel3");
         Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 80, 80));
+
+        Label.setBackground(new java.awt.Color(204, 204, 204));
         Fondo.add(Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 420, 700));
 
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 415, -1));

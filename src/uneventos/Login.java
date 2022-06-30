@@ -73,10 +73,10 @@ public class Login extends javax.swing.JFrame {
         Fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("USUARIO");
         Fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 300, 80, 20));
 
-        txtContraseña.setBackground(new java.awt.Color(255, 51, 0));
         txtContraseña.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtContraseñaActionPerformed(evt);
@@ -85,17 +85,22 @@ public class Login extends javax.swing.JFrame {
         Fondo.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 320, 40));
 
         Label2.setFont(new java.awt.Font("Britannic Bold", 1, 24)); // NOI18N
-        Label2.setForeground(new java.awt.Color(51, 51, 51));
+        Label2.setForeground(new java.awt.Color(255, 255, 255));
         Label2.setText("INICIAR SESIÓN");
         Fondo.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 290, 50));
 
-        txtUsuario.setBackground(new java.awt.Color(255, 51, 0));
         txtUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(66, 66, 66));
         txtUsuario.setBorder(null);
+        txtUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtUsuarioActionPerformed(evt);
+            }
+        });
         Fondo.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 320, 40));
 
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("CONTRASEÑA");
         Fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, 130, 30));
 
@@ -145,6 +150,10 @@ public class Login extends javax.swing.JFrame {
         menu.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void txtUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtUsuarioActionPerformed
 
     /**
      * @param args the command line arguments

@@ -114,8 +114,8 @@ public class Login extends javax.swing.JFrame {
         });
         Fondo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 120, 40));
 
-        Logo.setText("jLabel3");
-        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 80, 80));
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/logo.jpg"))); // NOI18N
+        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 80, 100));
 
         jButton2.setText("Admin");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +126,7 @@ public class Login extends javax.swing.JFrame {
         Fondo.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 40, -1, -1));
 
         Label.setBackground(new java.awt.Color(204, 204, 204));
+        Label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo2.jpg"))); // NOI18N
         Fondo.add(Label, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -50, 420, 700));
 
         getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 415, -1));

@@ -55,6 +55,7 @@ public class Evento2 extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        Imagen3 = new javax.swing.JLabel();
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,6 +170,9 @@ public class Evento2 extends javax.swing.JFrame {
         jScrollPane2.setViewportView(jTextArea2);
 
         jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+
+        Imagen3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo1.jpg"))); // NOI18N
+        jPanel1.add(Imagen3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -315,6 +319,7 @@ public class Evento2 extends javax.swing.JFrame {
     private javax.swing.JLabel Imagen;
     private javax.swing.JLabel Imagen1;
     private javax.swing.JLabel Imagen2;
+    private javax.swing.JLabel Imagen3;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton9;
     private javax.swing.JCheckBox jCheckBox1;

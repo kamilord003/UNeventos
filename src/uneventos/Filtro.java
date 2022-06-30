@@ -67,7 +67,7 @@ public class Filtro extends javax.swing.JFrame {
                 jCheckBox1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 170, -1, -1));
+        jPanel1.add(jCheckBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, -1, -1));
 
         jCheckBox2.setText("Cultural");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -75,10 +75,10 @@ public class Filtro extends javax.swing.JFrame {
                 jCheckBox2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
+        jPanel1.add(jCheckBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
 
         jCheckBox4.setText("Oficial");
-        jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 250, -1, -1));
+        jPanel1.add(jCheckBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 290, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(153, 153, 153));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -102,12 +102,12 @@ public class Filtro extends javax.swing.JFrame {
                 jCheckBox7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 450, -1, -1));
+        jPanel1.add(jCheckBox7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 410, -1, -1));
 
         jLabel1.setText("Temas Deseados");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, 250, 50));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 140, 250, 50));
 
-        Imagen.setText("jLabel1");
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo1.jpg"))); // NOI18N
         jPanel1.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
 
         jCheckBox8.setText("Estudiantil");

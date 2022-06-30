@@ -161,7 +161,7 @@ public class CrearEvento extends javax.swing.JFrame {
         jLabel7.setText("LUGAR");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 80, 20));
 
-        Fondo3.setText("jLabel8");
+        Fondo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo2.jpg"))); // NOI18N
         jPanel1.add(Fondo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

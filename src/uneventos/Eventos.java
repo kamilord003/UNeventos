@@ -100,6 +100,7 @@ public class Eventos extends javax.swing.JFrame {
 
         jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 420, -1));
 
+        Fondo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo2.jpg"))); // NOI18N
         Fondo2.setText("jLabel2");
         jPanel1.add(Fondo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
 

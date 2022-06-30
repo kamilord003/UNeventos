@@ -100,7 +100,7 @@ public class Opciones extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 110, 270, 60));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 180, 270, 60));
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
@@ -111,6 +111,8 @@ public class Opciones extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
+
+        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Fondo1.jpg"))); // NOI18N
         jPanel1.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

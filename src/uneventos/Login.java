@@ -89,7 +89,7 @@ public class Login extends javax.swing.JFrame {
         Label2.setText("INICIAR SESIÓN");
         Fondo.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 290, 50));
 
-        txtUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtUsuario.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(66, 66, 66));
         txtUsuario.setBorder(null);
         txtUsuario.addActionListener(new java.awt.event.ActionListener() {
@@ -115,7 +115,7 @@ public class Login extends javax.swing.JFrame {
         Fondo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 120, 40));
 
         Logo.setText("jLabel3");
-        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 80, 80));
+        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 80));
 
         jButton2.setText("Admin");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

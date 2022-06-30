@@ -114,10 +114,20 @@ public class Busqueda extends javax.swing.JFrame {
 
         jButton3.setBackground(new java.awt.Color(0, 84, 220));
         jButton3.setText("Evento 6");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 490, 100, 160));
 
         jButton4.setBackground(new java.awt.Color(214, 104, 11));
         jButton4.setText("Evento 5");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 490, 100, 160));
 
         jButton5.setBackground(new java.awt.Color(214, 104, 11));
@@ -140,6 +150,11 @@ public class Busqueda extends javax.swing.JFrame {
 
         jButton7.setBackground(new java.awt.Color(0, 84, 220));
         jButton7.setText("Evento 2");
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 100, 160));
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
@@ -195,11 +210,15 @@ public class Busqueda extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        Evento3 Evento3= new Evento3();
+        Evento3.setVisible(true);
+        this.dispose();        // TODO add your handling code here:
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
-        // TODO add your handling code here:
+        Evento4 Evento4= new Evento4();
+        Evento4.setVisible(true);
+        this.dispose(); 
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
@@ -207,6 +226,24 @@ public class Busqueda extends javax.swing.JFrame {
        menu.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
+
+    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+        Evento2 Evento2 = new Evento2();
+        Evento2.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton7ActionPerformed
+
+    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+        Evento5 Evento5= new Evento5();
+        Evento5.setVisible(true);
+        this.dispose();        
+    }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        Evento6 Evento6= new Evento6();
+        Evento6.setVisible(true);
+        this.dispose(); 
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

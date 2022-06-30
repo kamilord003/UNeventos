@@ -42,6 +42,7 @@ public class Evento2 extends javax.swing.JFrame {
         Imagen1 = new javax.swing.JLabel();
         Imagen2 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
+        Imagen = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jButton9 = new javax.swing.JButton();
@@ -51,10 +52,9 @@ public class Evento2 extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jProgressBar1 = new javax.swing.JProgressBar();
         jTextField4 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        Imagen = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea2 = new javax.swing.JTextArea();
 
         jFrame1.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,8 +112,8 @@ public class Evento2 extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Britannic Bold", 1, 36)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("Bailaton");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 40, 230, 60));
+        jLabel2.setText("Charla De MicroRobots");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 390, 60));
 
         jButton9.setBackground(new java.awt.Color(204, 204, 204));
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
@@ -126,10 +126,10 @@ public class Evento2 extends javax.swing.JFrame {
         jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 30, -1));
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/Plaza Che.JPG"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/CyT.PNG"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 230, 230));
 
-        jTextField1.setText("Plaza Che");
+        jTextField1.setText("Edificio CyT");
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
@@ -137,7 +137,7 @@ public class Evento2 extends javax.swing.JFrame {
         });
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 510, -1, -1));
 
-        jTextField2.setText("Manuel Uribe");
+        jTextField2.setText("Camilo Castañeda");
         jTextField2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField2ActionPerformed(evt);
@@ -145,26 +145,30 @@ public class Evento2 extends javax.swing.JFrame {
         });
         jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
 
-        jTextField3.setText("Baile e Entretenimiento (NO Oficial)");
+        jTextField3.setText("Charla (Oficial)");
         jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 240, -1));
 
-        jProgressBar1.setMaximum(1000);
-        jProgressBar1.setValue(678);
+        jProgressBar1.setMaximum(250);
+        jProgressBar1.setValue(56);
         jPanel1.add(jProgressBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 420, 300, 20));
 
-        jTextField4.setText("Jueves 30 de Junio, 6pm");
+        jTextField4.setText("Viernes 1 de Julio, 2pm");
+        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField4ActionPerformed(evt);
+            }
+        });
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Bailaton por el final de semestre \ny la semana infernal de examenes\ny proyectos.");
-        jScrollPane1.setViewportView(jTextArea1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         jButton1.setText("Asistir");
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 602, 140, 30));
-        jPanel1.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 700));
+
+        jTextArea2.setColumns(20);
+        jTextArea2.setRows(5);
+        jTextArea2.setText("Charla Sobre el futuro \nde la microtecnologia y\nsus aplicaciones \nen un futuro cercano.");
+        jScrollPane2.setViewportView(jTextArea2);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -185,8 +189,8 @@ public class Evento2 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-       Menu menu = new Menu();
-       menu.setVisible(true);
+       Busqueda Busqueda = new Busqueda();
+       Busqueda.setVisible(true);
        this.dispose();
     }//GEN-LAST:event_jButton9ActionPerformed
 
@@ -197,6 +201,10 @@ public class Evento2 extends javax.swing.JFrame {
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField2ActionPerformed
+
+    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField4ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -318,8 +326,8 @@ public class Evento2 extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JProgressBar jProgressBar1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;

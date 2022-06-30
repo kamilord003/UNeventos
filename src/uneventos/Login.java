@@ -115,7 +115,7 @@ public class Login extends javax.swing.JFrame {
         Fondo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 500, 120, 40));
 
         Logo.setText("jLabel3");
-        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 80, 80));
+        Fondo.add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 80, 80));
 
         jButton2.setText("Admin");
         jButton2.addActionListener(new java.awt.event.ActionListener() {

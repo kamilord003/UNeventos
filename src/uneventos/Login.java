@@ -89,7 +89,7 @@ public class Login extends javax.swing.JFrame {
         Fondo.add(Label2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 290, 50));
 
         txtUsuario.setBackground(new java.awt.Color(255, 51, 0));
-        txtUsuario.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        txtUsuario.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(66, 66, 66));
         txtUsuario.setBorder(null);
         Fondo.add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, 320, 40));

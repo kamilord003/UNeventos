@@ -5,9 +5,18 @@
 package uneventos;
 
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import java.sql.PreparedStatement;
 
 /**
  *
@@ -15,9 +24,8 @@ import javax.swing.JLabel;
  */
 public class CrearEvento extends javax.swing.JFrame {
 
-    /**
-     * Creates new form CrearEvento
-     */
+    Conexion con= new Conexion();
+    Connection cn = con.conectarMySQL();
     public CrearEvento() {
         initComponents();
         SetImageLabel(Fondo3, "src/imagenes/fondo2.jpg");
@@ -169,7 +177,18 @@ public class CrearEvento extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-
+        try {
+            PreparedStatement pps = cn.prepareStatement("INSERT INTO uneventos.uneventos(Nombre, Tipo/Facultad, Estado, Aforo, Fecha, Lugar) VALUES (?,?,?,?,?,?)");
+            pps.setString(1, Nombre.getText());
+            pps.setString(2, Tipo.getText());
+            pps.setString(3, Estado.getText());
+            pps.setString(4, Aforo.getText());
+            pps.setString(5, Fecha.getText());
+            pps.setString(6, Lugar.getText());
+            JOptionPane.showMessageDialog(null, "Datos Guardados");
+        } catch (SQLException ex) {
+            Logger.getLogger(CrearEvento.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void NombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreActionPerformed
@@ -243,7 +262,6 @@ public class CrearEvento extends javax.swing.JFrame {
        labelName.setIcon(icon);
        this.repaint();
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Aforo;
     private javax.swing.JTextField Estado;
